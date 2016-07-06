@@ -4,11 +4,11 @@
 
 int i = 0;          // implicit conversion, too, a.k.a. Int32
 short sh = 32767;   // 2^16, or 32768, or +/- 0-32767, a.k.a. Int16
+long l = 7;         // long int, 64-bit, a.k.a. Int64
 byte by = 255;      // 2^8, or 256, or +/- 0-255, a.k.a. Byte
 char c = 'i';       // a string is just a linked list of chars, note the single quotes, a.k.a. Char
 bool b = false;     // 1 = true, 0 = false, a.k.a. Boolean
-long l = 7;         // long int, 64-bit, a.k.a. Int64
-decimal p = 7.8;    // 128-bit precision decimal, very expensive, a.k.a. Decimal
+decimal p = 7.8m;    // 128-bit precision decimal, very expensive, a.k.a. Decimal
 double d = 7.80;    // 64-bit decimal, a.k.a. Double
 float f = 10.8f;    // floating point integer, must put f *explicit* conversion afterwards if using a constant, or you could cast as (float)
 decimal dd = 7.80m; // must add the m if using a constant, or you could cast as (decimal)
