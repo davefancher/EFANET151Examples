@@ -48,8 +48,8 @@
     <None Include="FlowControl\02-WhileLoops.csx" />
     <None Include="FlowControl\05-LoopingChallenges.md" />
     <None Include="FlowControl\06-If.csx" />
-    <None Include="FlowControl\07-Switch.csx" />
-    <None Include="FlowControl\08-Operators.csx" />
+    <None Include="FlowControl\08-Switch.csx" />
+    <None Include="FlowControl\07-Operators.csx" />
     <None Include="FlowControl\09-BranchingChallenges.md" />
   </ItemGroup>
   <ItemGroup>
