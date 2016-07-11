@@ -42,6 +42,7 @@
   <ItemGroup>
     <None Include="BasicTypes\04-TypeConversions.csx" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="BasicTypes\07-DateTime.csx" />
     <None Include="FlowControl\01-DoLoops.csx" />
     <None Include="FlowControl\03-ForLoops.csx" />
     <None Include="FlowControl\04-ForEachLoops.csx" />
@@ -51,6 +52,18 @@
     <None Include="FlowControl\08-Switch.csx" />
     <None Include="FlowControl\07-Operators.csx" />
     <None Include="FlowControl\09-BranchingChallenges.md" />
+    <None Include="FlowControl\10-Exceptions.csx" />
+    <None Include="Functions\01-Actions.csx" />
+    <None Include="Functions\02-Functions.csx" />
+    <None Include="Functions\03-ExpressionBodiedMembers.csx" />
+    <None Include="Functions\04-FizzBuzzChallenge.md" />
+    <None Include="OOP\01-Principles.csx" />
+    <None Include="OOP\02-BasicClasses.csx" />
+    <None Include="OOP\03-AbstractClasses.csx" />
+    <None Include="OOP\04-ClassChallenges.md" />
+    <None Include="OOP\05-StaticClasses.csx" />
+    <None Include="OOP\06-Interfaces.csx" />
+    <None Include="OOP\07-InterfaceChallenge.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BasicTypes\01-BasicTypes.csx" />
