@@ -63,6 +63,7 @@
     <None Include="OOP\04-ClassChallenges.md" />
     <None Include="OOP\05-StaticClasses.csx" />
     <None Include="OOP\06-Interfaces.csx" />
+    <None Include="OOP\06a-Interfaces.csx" />
     <None Include="OOP\07-InterfaceChallenge.md" />
   </ItemGroup>
   <ItemGroup>

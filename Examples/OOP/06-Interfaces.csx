@@ -1,4 +1,4 @@
-using System;
+﻿#r "System.Windows.Forms.dll"
 
 // Common interfaces in .NET
 // - IEnumerable<T>
@@ -7,75 +7,90 @@ using System;
 
 // Implement, not inherit
 
-public interface IPerson
+using System;
+using System.Windows.Forms;
+
+public interface IGreeter
 {
-	string FirstName { get; set; }
-	string LastName { get; set; }
+    void SayHello(string name);
 }
 
-// Implicit implementation
+// Implicit Implementation
+
+public class ConsoleGreeter
+    : IGreeter
+{
+    public void SayHello(string name)
+    {
+        Console.WriteLine($"Hello, {name}");
+    }
+}
+
+// Explicit Implementation
+
+public class WindowsGreeter
+    : IGreeter
+{
+    void IGreeter.SayHello(string name)
+    {
+        MessageBox.Show($"Hello, {name}", "Greetings");
+    }
+}
+
+// Dependency Injection (DI)
 
 public class Person
-	: IPerson
 {
-	public string FirstName { get; set; }
-	public string LastName { get; set; }
+    private readonly IGreeter _greeter;
+
+    public Person(IGreeter greeter)
+    {
+        _greeter = greeter;
+    }
+
+    public string Name { get; set; }
+
+    public void Greet()
+    {
+        _greeter.SayHello(Name);
+    }
 }
 
-var one = new Person { FirstName = "William", LastName = "Hartnell" };
-ShowPerson(one);
-Console.WriteLine();
+var me = new Person(new WindowsGreeter()) { Name = "Dave" };
+me.Greet();
 
-
-// Explicit implementation
-
-public class Doctor
-	: IPerson
-{
-	string IPerson.FirstName { get; set; }
-	string IPerson.LastName { get; set; }
-}
-
-// Error: Explicit implementation hides members
-//var twelve = new Doctor { FirstName = "Peter", LastName = "Capaldi" }; 
-IPerson twelve = new Doctor(); // Polymorphic behavior
-twelve.FirstName = "Peter";
-twelve.LastName = "Capaldi";
-
-ShowPerson(twelve);
-
-
-// Helper function
-
-public void ShowPerson(IPerson p)
-{
-	Console.WriteLine("{0}, {1}", p.LastName, p.FirstName);
-}
-
-
+// ----------
 
 public interface IDateTimeService
 {
-	DateTime GetCurrent();
+    DateTime GetCurrent();
 }
 
-public class DateTimeService
-	: IDateTimeService
+public class RealDateTimeService
+    : IDateTimeService
 {
-	public DateTime GetCurrent()
-	{
-		return DateTime.Now;
-	}
+    public DateTime GetCurrent()
+    {
+        return DateTime.Now;
+    }
 }
 
-public class MockDateTimeService
-	: IDateTimeService
+public class FakeDateTimeService
+    : IDateTimeService
 {
-	public DateTime GetCurrent()
-	{
-		return DateTime.Parse("2015-10-11T16:00:00Z");
-	}
+    private readonly DateTime _testDate;
+
+    public FakeDateTimeService(DateTime date)
+    {
+        _testDate = date;
+    }
+
+    public DateTime GetCurrent()
+    {
+        return _testDate;
+    }
 }
 
-var dts = new MockDateTimeService();
-dts.GetCurrent().ToString("O").Dump();
+var svc = new MockDateTimeService();
+Console.WriteLine($"{svc.GetCurrent():O}");
+

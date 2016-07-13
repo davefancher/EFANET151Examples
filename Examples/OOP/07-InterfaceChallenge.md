@@ -20,7 +20,7 @@ public interface ILogger
 <!--
 // Explicit Implementation
 
-public class ConsoleLogger
+public class Logger
 	: ILogger
 {
 	private void WriteMessage(string level, string message)
