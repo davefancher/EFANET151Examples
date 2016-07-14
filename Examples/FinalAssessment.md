@@ -5,7 +5,17 @@ The Final Challenge
 * Do your best on this assessment. Get as far as you can in 120 minutes. 
 * Note that we will consider partial answers, so if your code is close and not working, feel free to comment out your answer.
 * Feel free to reference any other work you've done or refer to online resources to complete your answers. 
-* Please PUT A NUMBERED COMMENT in the general vicinity of your answer so that we know where you're answering the question. 
+* Please put a numbered comment in the general vicinity of your answer so that we know which activity the code refers to. 
+
+# Part Zero: Setup
+
+1. Create a new Github Repository for the assessment (or use an existing repository if you prefer)
+2. Create a new C# Console Application or C# Class Library project in Visual Studio (Or use an existing project if you prefer)
+3. Create a new .csx file to contain your assessment responses (code file with csx extension)
+4. Add the .csx file to your the local repository ([git add](https://git-scm.com/docs/git-add))
+5. When you've completed the assessment: 
+   1. push the csx file to Github ([git push](https://git-scm.com/docs/git-push))
+   2. Send the Github link for your completed assessment to Dave via slack.
 
 # Part One: The Basics
 
