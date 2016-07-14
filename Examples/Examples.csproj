@@ -44,6 +44,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="BasicTypes\07-DateTime.csx" />
     <None Include="FinalAssessment.md" />
+    <None Include="FinalAssessmentSolution.csx" />
     <None Include="FlowControl\01-DoLoops.csx" />
     <None Include="FlowControl\03-ForLoops.csx" />
     <None Include="FlowControl\04-ForEachLoops.csx" />
