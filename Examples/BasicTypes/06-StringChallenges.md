@@ -19,9 +19,10 @@ Create a note to a potential employer that states your goals as a developer. Inc
 * [How to: Concatenate Multiple Strings](https://msdn.microsoft.com/en-us/library/ms228504.aspx)
 
 # GOLD CHALLENGE:
-	Create 2 strings: Your username in lower case, and your username in uppercase.
-	Write code that compares the two strings and prints whether or not they are equal.
-	Print one sentence that says that they are equal. Print another string that says that they are not equal. 
+
+1. Create 2 strings: Your username in lower case, and your username in uppercase.
+2. Write code that compares the two strings and prints whether or not they are equal.
+3. Print one sentence that says that they are equal. Print another string that says that they are not equal. 
 
 ## REFERENCE
 * [How to: Compare Strings](https://msdn.microsoft.com/en-us/library/cc165449.aspx)
